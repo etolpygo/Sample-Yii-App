@@ -1,0 +1,413 @@
+2014/11/21 00:08:06 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] No such file or directory' in /Users/etolpygo/Sites/yii/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Users/etolpygo/Sites/yii/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /Users/etolpygo/Sites/yii/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /Users/etolpygo/Sites/yii/framework/base/CModule.php(387): CDbConnection->init()
+#3 /Users/etolpygo/Sites/yii/framework/base/CModule.php(103): CModule->getComponent('db')
+#4 /Users/etolpygo/Sites/yii/framework/gii/generators/model/ModelCode.php(60): CModule->__get('db')
+#5 /Users/etolpygo/Sites/yii/framework/web/CFormModel.php(39): ModelCode->init()
+#6 /Users/etolpygo/Sites/yii/framework/gii/CCodeGenerator.php(153): CFormModel->__construct()
+#7 /Users/etolpygo/Sites/yii/framework/gii/CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 /Users/etolpygo/Sites/yii/framework/web/actions/CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 /Users/etolpygo/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /Users/etolpygo/Sites/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#11 /Users/etolpygo/Sites/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Users/etolpygo/Sites/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#13 /Users/etolpygo/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gii/model/index')
+#14 /Users/etolpygo/Sites/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /Users/etolpygo/Sites/blog/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/~etolpygo/blog/index.php?r=gii/model/index
+HTTP_REFERER=http://localhost/~etolpygo/blog/index.php?r=gii/default/index
+---
+2014/11/21 00:08:53 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'yii_blogger'@'localhost' (using password: YES)' in /Users/etolpygo/Sites/yii/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /Users/etolpygo/Sites/yii/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /Users/etolpygo/Sites/yii/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /Users/etolpygo/Sites/yii/framework/base/CModule.php(387): CDbConnection->init()
+#3 /Users/etolpygo/Sites/yii/framework/base/CModule.php(103): CModule->getComponent('db')
+#4 /Users/etolpygo/Sites/yii/framework/gii/generators/model/ModelCode.php(60): CModule->__get('db')
+#5 /Users/etolpygo/Sites/yii/framework/web/CFormModel.php(39): ModelCode->init()
+#6 /Users/etolpygo/Sites/yii/framework/gii/CCodeGenerator.php(153): CFormModel->__construct()
+#7 /Users/etolpygo/Sites/yii/framework/gii/CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 /Users/etolpygo/Sites/yii/framework/web/actions/CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 /Users/etolpygo/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /Users/etolpygo/Sites/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#11 /Users/etolpygo/Sites/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Users/etolpygo/Sites/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#13 /Users/etolpygo/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('gii/model/index')
+#14 /Users/etolpygo/Sites/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /Users/etolpygo/Sites/blog/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/~etolpygo/blog/index.php?r=gii/model/index
+HTTP_REFERER=http://localhost/~etolpygo/blog/index.php?r=gii/default/index
+---
+2014/12/24 23:34:46 [warning] [application] Failed to set unsafe attribute "create_time" of "Post".
+in /Users/etolpygo/Sites/blog/protected/controllers/PostController.php (72)
+in /Users/etolpygo/Sites/blog/index.php (13)
+2014/12/24 23:34:46 [warning] [application] Failed to set unsafe attribute "update_time" of "Post".
+in /Users/etolpygo/Sites/blog/protected/controllers/PostController.php (72)
+in /Users/etolpygo/Sites/blog/index.php (13)
+2014/12/24 23:34:46 [error] [php] preg_match(): No ending delimiter '/' found (/Users/etolpygo/Sites/yii/framework/validators/CRegularExpressionValidator.php:53)
+Stack trace:
+#0 /Users/etolpygo/Sites/yii/framework/base/CModel.php(159): CRegularExpressionValidator->validate()
+#1 /Users/etolpygo/Sites/yii/framework/db/ar/CActiveRecord.php(805): Post->validate()
+#2 /Users/etolpygo/Sites/blog/protected/controllers/PostController.php(73): Post->save()
+#3 /Users/etolpygo/Sites/yii/framework/web/actions/CInlineAction.php(49): PostController->actionCreate()
+#4 /Users/etolpygo/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Users/etolpygo/Sites/yii/framework/web/filters/CFilterChain.php(133): PostController->runAction()
+#6 /Users/etolpygo/Sites/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Users/etolpygo/Sites/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /Users/etolpygo/Sites/yii/framework/web/filters/CInlineFilter.php(58): PostController->filterAccessControl()
+#9 /Users/etolpygo/Sites/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /Users/etolpygo/Sites/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Users/etolpygo/Sites/yii/framework/web/CController.php(265): PostController->runActionWithFilters()
+#12 /Users/etolpygo/Sites/yii/framework/web/CWebApplication.php(282): PostController->run()
+#13 /Users/etolpygo/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /Users/etolpygo/Sites/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /Users/etolpygo/Sites/blog/index.php(13): CWebApplication->run()
+REQUEST_URI=/~etolpygo/blog/index.php?r=post/create
+in /Users/etolpygo/Sites/blog/protected/controllers/PostController.php (73)
+in /Users/etolpygo/Sites/blog/index.php (13)
+2014/12/24 23:35:18 [warning] [application] Failed to set unsafe attribute "create_time" of "Post".
+in /Users/etolpygo/Sites/blog/protected/controllers/PostController.php (72)
+in /Users/etolpygo/Sites/blog/index.php (13)
+2014/12/24 23:35:18 [warning] [application] Failed to set unsafe attribute "update_time" of "Post".
+in /Users/etolpygo/Sites/blog/protected/controllers/PostController.php (72)
+in /Users/etolpygo/Sites/blog/index.php (13)
+2014/12/24 23:35:34 [warning] [application] Failed to set unsafe attribute "create_time" of "Post".
+in /Users/etolpygo/Sites/blog/protected/controllers/PostController.php (72)
+in /Users/etolpygo/Sites/blog/index.php (13)
+2014/12/24 23:35:34 [warning] [application] Failed to set unsafe attribute "update_time" of "Post".
+in /Users/etolpygo/Sites/blog/protected/controllers/PostController.php (72)
+in /Users/etolpygo/Sites/blog/index.php (13)
+2014/12/24 23:36:21 [warning] [application] Failed to set unsafe attribute "create_time" of "Post".
+in /Users/etolpygo/Sites/blog/protected/controllers/PostController.php (72)
+in /Users/etolpygo/Sites/blog/index.php (13)
+2014/12/24 23:36:21 [warning] [application] Failed to set unsafe attribute "update_time" of "Post".
+in /Users/etolpygo/Sites/blog/protected/controllers/PostController.php (72)
+in /Users/etolpygo/Sites/blog/index.php (13)
+2014/12/24 23:37:19 [warning] [application] Failed to set unsafe attribute "create_time" of "Post".
+in /Users/etolpygo/Sites/blog/protected/controllers/PostController.php (72)
+in /Users/etolpygo/Sites/blog/index.php (13)
+2014/12/24 23:37:19 [warning] [application] Failed to set unsafe attribute "update_time" of "Post".
+in /Users/etolpygo/Sites/blog/protected/controllers/PostController.php (72)
+in /Users/etolpygo/Sites/blog/index.php (13)
+2014/12/24 23:38:44 [warning] [application] Failed to set unsafe attribute "create_time" of "Post".
+in /Users/etolpygo/Sites/blog/protected/controllers/PostController.php (72)
+in /Users/etolpygo/Sites/blog/index.php (13)
+2014/12/24 23:38:44 [warning] [application] Failed to set unsafe attribute "update_time" of "Post".
+in /Users/etolpygo/Sites/blog/protected/controllers/PostController.php (72)
+in /Users/etolpygo/Sites/blog/index.php (13)
+2014/12/24 23:39:54 [warning] [application] Failed to set unsafe attribute "create_time" of "Post".
+in /Users/etolpygo/Sites/blog/protected/controllers/PostController.php (72)
+in /Users/etolpygo/Sites/blog/index.php (13)
+2014/12/24 23:39:54 [warning] [application] Failed to set unsafe attribute "update_time" of "Post".
+in /Users/etolpygo/Sites/blog/protected/controllers/PostController.php (72)
+in /Users/etolpygo/Sites/blog/index.php (13)
+2014/12/24 23:39:54 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`yii_blog`.`blahg_post`, CONSTRAINT `FK_post_author` FOREIGN KEY (`author_id`) REFERENCES `blahg_user` (`id`) ON DELETE CASCADE). The SQL statement executed was: INSERT INTO `blahg_post` (`title`, `content`, `tags`, `status`, `author_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4).
+in /Users/etolpygo/Sites/blog/protected/controllers/PostController.php (73)
+in /Users/etolpygo/Sites/blog/index.php (13)
+2014/12/24 23:39:54 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`yii_blog`.`blahg_post`, CONSTRAINT `FK_post_author` FOREIGN KEY (`author_id`) REFERENCES `blahg_user` (`id`) ON DELETE CASCADE). The SQL statement executed was: INSERT INTO `blahg_post` (`title`, `content`, `tags`, `status`, `author_id`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4)' in /Users/etolpygo/Sites/yii/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /Users/etolpygo/Sites/yii/framework/db/ar/CActiveRecord.php(1077): CDbCommand->execute()
+#1 /Users/etolpygo/Sites/yii/framework/db/ar/CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 /Users/etolpygo/Sites/blog/protected/controllers/PostController.php(73): CActiveRecord->save()
+#3 /Users/etolpygo/Sites/yii/framework/web/actions/CInlineAction.php(49): PostController->actionCreate()
+#4 /Users/etolpygo/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /Users/etolpygo/Sites/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /Users/etolpygo/Sites/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Users/etolpygo/Sites/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /Users/etolpygo/Sites/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /Users/etolpygo/Sites/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /Users/etolpygo/Sites/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Users/etolpygo/Sites/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /Users/etolpygo/Sites/yii/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /Users/etolpygo/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('post/create')
+#14 /Users/etolpygo/Sites/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /Users/etolpygo/Sites/blog/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/~etolpygo/blog/index.php?r=post/create
+HTTP_REFERER=http://localhost/~etolpygo/blog/index.php?r=post/create
+---
+2014/12/24 23:40:45 [warning] [application] Failed to set unsafe attribute "create_time" of "Post".
+in /Users/etolpygo/Sites/blog/protected/controllers/PostController.php (72)
+in /Users/etolpygo/Sites/blog/index.php (13)
+2014/12/24 23:40:45 [warning] [application] Failed to set unsafe attribute "update_time" of "Post".
+in /Users/etolpygo/Sites/blog/protected/controllers/PostController.php (72)
+in /Users/etolpygo/Sites/blog/index.php (13)
+2014/12/24 23:41:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user".' in /Users/etolpygo/Sites/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/etolpygo/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('user')
+#1 /Users/etolpygo/Sites/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/etolpygo/Sites/blog/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~etolpygo/blog/index.php?r=user
+---
+2014/12/28 00:47:17 [error] [php] Undefined variable: _id (/Users/etolpygo/Sites/blog/protected/components/UserIdentity.php:35)
+Stack trace:
+#0 /Users/etolpygo/Sites/blog/protected/controllers/SiteController.php(94): LoginForm->login()
+#1 /Users/etolpygo/Sites/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#2 /Users/etolpygo/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#3 /Users/etolpygo/Sites/yii/framework/web/CController.php(286): SiteController->runAction()
+#4 /Users/etolpygo/Sites/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#5 /Users/etolpygo/Sites/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#6 /Users/etolpygo/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#7 /Users/etolpygo/Sites/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#8 /Users/etolpygo/Sites/blog/index.php(13): CWebApplication->run()
+REQUEST_URI=/~etolpygo/blog/index.php?r=site/login
+in /Users/etolpygo/Sites/blog/protected/components/UserIdentity.php (35)
+in /Users/etolpygo/Sites/blog/protected/models/LoginForm.php (71)
+in /Users/etolpygo/Sites/blog/protected/controllers/SiteController.php (94)
+2014/12/29 01:47:00 [error] [php] Missing argument 1 for PostController::loadModel(), called in /Users/etolpygo/Sites/blog/protected/controllers/PostController.php on line 50 and defined (/Users/etolpygo/Sites/blog/protected/controllers/PostController.php:150)
+Stack trace:
+#0 /Users/etolpygo/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /Users/etolpygo/Sites/yii/framework/web/filters/CFilterChain.php(133): PostController->runAction()
+#2 /Users/etolpygo/Sites/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /Users/etolpygo/Sites/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#4 /Users/etolpygo/Sites/yii/framework/web/filters/CInlineFilter.php(58): PostController->filterAccessControl()
+#5 /Users/etolpygo/Sites/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#6 /Users/etolpygo/Sites/yii/framework/web/CController.php(291): CFilterChain->run()
+#7 /Users/etolpygo/Sites/yii/framework/web/CController.php(265): PostController->runActionWithFilters()
+#8 /Users/etolpygo/Sites/yii/framework/web/CWebApplication.php(282): PostController->run()
+#9 /Users/etolpygo/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#10 /Users/etolpygo/Sites/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#11 /Users/etolpygo/Sites/blog/index.php(13): CWebApplication->run()
+REQUEST_URI=/~etolpygo/blog/index.php?r=post/view&id=1
+in /Users/etolpygo/Sites/blog/protected/controllers/PostController.php (150)
+in /Users/etolpygo/Sites/blog/protected/controllers/PostController.php (50)
+in /Users/etolpygo/Sites/blog/index.php (13)
+2014/12/29 01:48:29 [error] [php] include(Poast.php): failed to open stream: No such file or directory (/Users/etolpygo/Sites/yii/framework/YiiBase.php:427)
+Stack trace:
+#0 /Users/etolpygo/Sites/blog/protected/controllers/PostController.php(162): spl_autoload_call()
+#1 /Users/etolpygo/Sites/blog/protected/controllers/PostController.php(50): PostController->loadModel()
+#2 /Users/etolpygo/Sites/yii/framework/web/actions/CInlineAction.php(49): PostController->actionView()
+#3 /Users/etolpygo/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#4 /Users/etolpygo/Sites/yii/framework/web/filters/CFilterChain.php(133): PostController->runAction()
+#5 /Users/etolpygo/Sites/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /Users/etolpygo/Sites/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#7 /Users/etolpygo/Sites/yii/framework/web/filters/CInlineFilter.php(58): PostController->filterAccessControl()
+#8 /Users/etolpygo/Sites/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#9 /Users/etolpygo/Sites/yii/framework/web/CController.php(291): CFilterChain->run()
+#10 /Users/etolpygo/Sites/yii/framework/web/CController.php(265): PostController->runActionWithFilters()
+#11 /Users/etolpygo/Sites/yii/framework/web/CWebApplication.php(282): PostController->run()
+#12 /Users/etolpygo/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#13 /Users/etolpygo/Sites/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /Users/etolpygo/Sites/blog/index.php(13): CWebApplication->run()
+REQUEST_URI=/~etolpygo/blog/index.php?r=post/view&id=1
+in /Users/etolpygo/Sites/blog/protected/controllers/PostController.php (162)
+in /Users/etolpygo/Sites/blog/protected/controllers/PostController.php (50)
+in /Users/etolpygo/Sites/blog/index.php (13)
+2014/12/29 01:51:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /Users/etolpygo/Sites/blog/protected/controllers/PostController.php:165
+Stack trace:
+#0 /Users/etolpygo/Sites/blog/protected/controllers/PostController.php(50): PostController->loadModel()
+#1 /Users/etolpygo/Sites/yii/framework/web/actions/CInlineAction.php(49): PostController->actionView()
+#2 /Users/etolpygo/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /Users/etolpygo/Sites/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 /Users/etolpygo/Sites/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#5 /Users/etolpygo/Sites/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#6 /Users/etolpygo/Sites/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 /Users/etolpygo/Sites/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#8 /Users/etolpygo/Sites/yii/framework/web/CController.php(291): CFilterChain->run()
+#9 /Users/etolpygo/Sites/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /Users/etolpygo/Sites/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#11 /Users/etolpygo/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('post/view')
+#12 /Users/etolpygo/Sites/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#13 /Users/etolpygo/Sites/blog/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/~etolpygo/blog/index.php?r=post/view&id=555
+---
+2014/12/29 14:19:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "user".' in /Users/etolpygo/Sites/yii/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/etolpygo/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('user')
+#1 /Users/etolpygo/Sites/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Users/etolpygo/Sites/blog/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/~etolpygo/blog/index.php?r=user
+---
+2014/12/29 14:21:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in /Users/etolpygo/Sites/blog/protected/controllers/PostController.php:165
+Stack trace:
+#0 /Users/etolpygo/Sites/blog/protected/controllers/PostController.php(110): PostController->loadModel()
+#1 /Users/etolpygo/Sites/yii/framework/web/actions/CInlineAction.php(49): PostController->actionDelete()
+#2 /Users/etolpygo/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /Users/etolpygo/Sites/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 /Users/etolpygo/Sites/yii/framework/web/CController.php(1116): CFilterChain->run()
+#5 /Users/etolpygo/Sites/yii/framework/web/filters/CInlineFilter.php(58): CController->filterPostOnly(Object(CFilterChain))
+#6 /Users/etolpygo/Sites/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#7 /Users/etolpygo/Sites/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /Users/etolpygo/Sites/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 /Users/etolpygo/Sites/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 /Users/etolpygo/Sites/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /Users/etolpygo/Sites/yii/framework/web/CController.php(291): CFilterChain->run()
+#12 /Users/etolpygo/Sites/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /Users/etolpygo/Sites/yii/framework/web/CWebApplication.php(282): CController->run('delete')
+#14 /Users/etolpygo/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('post/delete')
+#15 /Users/etolpygo/Sites/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#16 /Users/etolpygo/Sites/blog/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/~etolpygo/blog/index.php?r=post/delete&id=11
+HTTP_REFERER=http://localhost/~etolpygo/blog/index.php?r=post/view&id=11
+---
+2014/12/29 18:21:12 [error] [exception.CException] exception 'CException' with message 'Property "Post.tagLinks" is not defined.' in /Users/etolpygo/Sites/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /Users/etolpygo/Sites/yii/framework/db/ar/CActiveRecord.php(145): CComponent->__get('tagLinks')
+#1 /Users/etolpygo/Sites/blog/protected/views/post/_view.php(17): CActiveRecord->__get('tagLinks')
+#2 /Users/etolpygo/Sites/yii/framework/web/CBaseController.php(130): require('/Users/etolpygo...')
+#3 /Users/etolpygo/Sites/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/etolpygo...', Array, false)
+#4 /Users/etolpygo/Sites/yii/framework/zii/widgets/CListView.php(291): CBaseController->renderFile('/Users/etolpygo...', Array)
+#5 /Users/etolpygo/Sites/yii/framework/zii/widgets/CBaseListView.php(167): CListView->renderItems()
+#6 [internal function]: CBaseListView->renderSection(Array)
+#7 /Users/etolpygo/Sites/yii/framework/zii/widgets/CBaseListView.php(150): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{sort...')
+#8 /Users/etolpygo/Sites/yii/framework/zii/widgets/CBaseListView.php(135): CBaseListView->renderContent()
+#9 /Users/etolpygo/Sites/yii/framework/web/CBaseController.php(173): CBaseListView->run()
+#10 /Users/etolpygo/Sites/blog/protected/views/post/index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#11 /Users/etolpygo/Sites/yii/framework/web/CBaseController.php(126): require('/Users/etolpygo...')
+#12 /Users/etolpygo/Sites/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/etolpygo...', Array, true)
+#13 /Users/etolpygo/Sites/yii/framework/web/CController.php(869): CBaseController->renderFile('/Users/etolpygo...', Array, true)
+#14 /Users/etolpygo/Sites/yii/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#15 /Users/etolpygo/Sites/blog/protected/controllers/PostController.php(125): CController->render('index', Array)
+#16 /Users/etolpygo/Sites/yii/framework/web/actions/CInlineAction.php(49): PostController->actionIndex()
+#17 /Users/etolpygo/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#18 /Users/etolpygo/Sites/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 /Users/etolpygo/Sites/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#20 /Users/etolpygo/Sites/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 /Users/etolpygo/Sites/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 /Users/etolpygo/Sites/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 /Users/etolpygo/Sites/yii/framework/web/CController.php(291): CFilterChain->run()
+#24 /Users/etolpygo/Sites/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 /Users/etolpygo/Sites/yii/framework/web/CWebApplication.php(282): CController->run('index')
+#26 /Users/etolpygo/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('post/index')
+#27 /Users/etolpygo/Sites/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#28 /Users/etolpygo/Sites/blog/index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/~etolpygo/blog/index.php?r=post/index
+HTTP_REFERER=http://localhost/~etolpygo/blog/index.php?r=post/view&id=10
+---
+2014/12/29 18:22:57 [error] [php] Undefined variable: comment (/Users/etolpygo/Sites/blog/protected/views/post/view.php:32)
+Stack trace:
+#0 /Users/etolpygo/Sites/yii/framework/web/CController.php(869): PostController->renderFile()
+#1 /Users/etolpygo/Sites/yii/framework/web/CController.php(782): PostController->renderPartial()
+#2 /Users/etolpygo/Sites/blog/protected/controllers/PostController.php(53): PostController->render()
+#3 /Users/etolpygo/Sites/yii/framework/web/actions/CInlineAction.php(49): PostController->actionView()
+#4 /Users/etolpygo/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /Users/etolpygo/Sites/yii/framework/web/filters/CFilterChain.php(133): PostController->runAction()
+#6 /Users/etolpygo/Sites/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /Users/etolpygo/Sites/yii/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /Users/etolpygo/Sites/yii/framework/web/filters/CInlineFilter.php(58): PostController->filterAccessControl()
+#9 /Users/etolpygo/Sites/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /Users/etolpygo/Sites/yii/framework/web/CController.php(291): CFilterChain->run()
+#11 /Users/etolpygo/Sites/yii/framework/web/CController.php(265): PostController->runActionWithFilters()
+#12 /Users/etolpygo/Sites/yii/framework/web/CWebApplication.php(282): PostController->run()
+#13 /Users/etolpygo/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /Users/etolpygo/Sites/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#15 /Users/etolpygo/Sites/blog/index.php(13): CWebApplication->run()
+REQUEST_URI=/~etolpygo/blog/index.php?r=post/view&id=13&title=what
+in /Users/etolpygo/Sites/blog/protected/views/post/view.php (32)
+in /Users/etolpygo/Sites/blog/protected/controllers/PostController.php (53)
+in /Users/etolpygo/Sites/blog/index.php (13)
+2014/12/29 18:34:30 [error] [exception.CException] exception 'CException' with message 'PostController cannot find the requested view "_comments".' in /Users/etolpygo/Sites/yii/framework/web/CController.php:878
+Stack trace:
+#0 /Users/etolpygo/Sites/blog/protected/views/post/view.php(21): CController->renderPartial('_comments', Array)
+#1 /Users/etolpygo/Sites/yii/framework/web/CBaseController.php(126): require('/Users/etolpygo...')
+#2 /Users/etolpygo/Sites/yii/framework/web/CBaseController.php(95): CBaseController->renderInternal('/Users/etolpygo...', Array, true)
+#3 /Users/etolpygo/Sites/yii/framework/web/CController.php(869): CBaseController->renderFile('/Users/etolpygo...', Array, true)
+#4 /Users/etolpygo/Sites/yii/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#5 /Users/etolpygo/Sites/blog/protected/controllers/PostController.php(53): CController->render('view', Array)
+#6 /Users/etolpygo/Sites/yii/framework/web/actions/CInlineAction.php(49): PostController->actionView()
+#7 /Users/etolpygo/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /Users/etolpygo/Sites/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 /Users/etolpygo/Sites/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#10 /Users/etolpygo/Sites/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 /Users/etolpygo/Sites/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 /Users/etolpygo/Sites/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 /Users/etolpygo/Sites/yii/framework/web/CController.php(291): CFilterChain->run()
+#14 /Users/etolpygo/Sites/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /Users/etolpygo/Sites/yii/framework/web/CWebApplication.php(282): CController->run('view')
+#16 /Users/etolpygo/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('post/view')
+#17 /Users/etolpygo/Sites/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#18 /Users/etolpygo/Sites/blog/index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/~etolpygo/blog/index.php?r=post/view&id=13&title=what
+HTTP_REFERER=http://localhost/~etolpygo/blog/index.php?r=post/index
+---
+2014/12/29 22:51:00 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection.connectionString cannot be empty.' in /Users/etolpygo/Sites/yii/framework/db/CDbConnection.php:370
+Stack trace:
+#0 /Users/etolpygo/Sites/yii/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /Users/etolpygo/Sites/yii/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /Users/etolpygo/Sites/yii/framework/base/CModule.php(387): CDbConnection->init()
+#3 /Users/etolpygo/Sites/yii/framework/base/CApplication.php(450): CModule->getComponent('db')
+#4 /Users/etolpygo/Sites/yii/framework/db/ar/CActiveRecord.php(634): CApplication->getDb()
+#5 /Users/etolpygo/Sites/yii/framework/db/ar/CActiveRecord.php(2361): CActiveRecord->getDbConnection()
+#6 /Users/etolpygo/Sites/yii/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Post))
+#7 /Users/etolpygo/Sites/yii/framework/db/ar/CActiveRecord.php(79): CActiveRecord->getMetaData()
+#8 /Users/etolpygo/Sites/blog/protected/controllers/PostController.php(148): CActiveRecord->__construct('search')
+#9 /Users/etolpygo/Sites/yii/framework/web/actions/CInlineAction.php(49): PostController->actionAdmin()
+#10 /Users/etolpygo/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /Users/etolpygo/Sites/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /Users/etolpygo/Sites/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /Users/etolpygo/Sites/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /Users/etolpygo/Sites/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /Users/etolpygo/Sites/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /Users/etolpygo/Sites/yii/framework/web/CController.php(291): CFilterChain->run()
+#17 /Users/etolpygo/Sites/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /Users/etolpygo/Sites/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#19 /Users/etolpygo/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('post/admin')
+#20 /Users/etolpygo/Sites/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#21 /Users/etolpygo/Sites/blog/index.php(22): CApplication->run()
+#22 {main}
+REQUEST_URI=/~etolpygo/blog/index.php?r=post/admin
+---
+2014/12/29 22:53:21 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection.connectionString cannot be empty.' in /Users/etolpygo/Sites/yii/framework/db/CDbConnection.php:370
+Stack trace:
+#0 /Users/etolpygo/Sites/yii/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /Users/etolpygo/Sites/yii/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /Users/etolpygo/Sites/yii/framework/base/CModule.php(387): CDbConnection->init()
+#3 /Users/etolpygo/Sites/yii/framework/base/CApplication.php(450): CModule->getComponent('db')
+#4 /Users/etolpygo/Sites/yii/framework/db/ar/CActiveRecord.php(634): CApplication->getDb()
+#5 /Users/etolpygo/Sites/yii/framework/db/ar/CActiveRecord.php(2361): CActiveRecord->getDbConnection()
+#6 /Users/etolpygo/Sites/yii/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Post))
+#7 /Users/etolpygo/Sites/yii/framework/db/ar/CActiveRecord.php(79): CActiveRecord->getMetaData()
+#8 /Users/etolpygo/Sites/blog/protected/controllers/PostController.php(148): CActiveRecord->__construct('search')
+#9 /Users/etolpygo/Sites/yii/framework/web/actions/CInlineAction.php(49): PostController->actionAdmin()
+#10 /Users/etolpygo/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /Users/etolpygo/Sites/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /Users/etolpygo/Sites/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /Users/etolpygo/Sites/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /Users/etolpygo/Sites/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /Users/etolpygo/Sites/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /Users/etolpygo/Sites/yii/framework/web/CController.php(291): CFilterChain->run()
+#17 /Users/etolpygo/Sites/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /Users/etolpygo/Sites/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#19 /Users/etolpygo/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('post/admin')
+#20 /Users/etolpygo/Sites/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#21 /Users/etolpygo/Sites/blog/index.php(22): CApplication->run()
+#22 {main}
+REQUEST_URI=/~etolpygo/blog/index.php?r=post/admin
+---
+2014/12/29 22:53:22 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection.connectionString cannot be empty.' in /Users/etolpygo/Sites/yii/framework/db/CDbConnection.php:370
+Stack trace:
+#0 /Users/etolpygo/Sites/yii/framework/db/CDbConnection.php(330): CDbConnection->open()
+#1 /Users/etolpygo/Sites/yii/framework/db/CDbConnection.php(308): CDbConnection->setActive(true)
+#2 /Users/etolpygo/Sites/yii/framework/base/CModule.php(387): CDbConnection->init()
+#3 /Users/etolpygo/Sites/yii/framework/base/CApplication.php(450): CModule->getComponent('db')
+#4 /Users/etolpygo/Sites/yii/framework/db/ar/CActiveRecord.php(634): CApplication->getDb()
+#5 /Users/etolpygo/Sites/yii/framework/db/ar/CActiveRecord.php(2361): CActiveRecord->getDbConnection()
+#6 /Users/etolpygo/Sites/yii/framework/db/ar/CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Post))
+#7 /Users/etolpygo/Sites/yii/framework/db/ar/CActiveRecord.php(79): CActiveRecord->getMetaData()
+#8 /Users/etolpygo/Sites/blog/protected/controllers/PostController.php(148): CActiveRecord->__construct('search')
+#9 /Users/etolpygo/Sites/yii/framework/web/actions/CInlineAction.php(49): PostController->actionAdmin()
+#10 /Users/etolpygo/Sites/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /Users/etolpygo/Sites/yii/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /Users/etolpygo/Sites/yii/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /Users/etolpygo/Sites/yii/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /Users/etolpygo/Sites/yii/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /Users/etolpygo/Sites/yii/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /Users/etolpygo/Sites/yii/framework/web/CController.php(291): CFilterChain->run()
+#17 /Users/etolpygo/Sites/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /Users/etolpygo/Sites/yii/framework/web/CWebApplication.php(282): CController->run('admin')
+#19 /Users/etolpygo/Sites/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('post/admin')
+#20 /Users/etolpygo/Sites/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#21 /Users/etolpygo/Sites/blog/index.php(22): CApplication->run()
+#22 {main}
+REQUEST_URI=/~etolpygo/blog/index.php?r=post/admin
+---
