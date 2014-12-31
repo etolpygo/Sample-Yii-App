@@ -9,3 +9,6 @@
 
 # ignore the local gii settings
 /protected/config/gii.php
+
+# ignore the application log 
+/protected/runtime/application.log
