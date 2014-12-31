@@ -1,5 +1,6 @@
 <?php
 $this->breadcrumbs=array(
+	'Posts'=>array('index'),
 	$model->title,
 );
 $this->pageTitle=$model->title;
@@ -10,7 +11,6 @@ $this->pageTitle=$model->title;
 )); ?>
 
 <div id="comments">
-	<?php // if($model->commentCount>=1): ?>
 		<h3>
 			<?php echo Utilities::pluralize($model->commentCount, 'comment', 'comments'); ?>
 		</h3>
@@ -18,7 +18,6 @@ $this->pageTitle=$model->title;
 		<?php // $this->renderPartial('_comments',array(
 		// 			'post'=>$model,
 		// 			'comments'=>$model->comments)); ?>
-	<?php // endif; ?>
 
 	<h3>Leave a Comment</h3>
 

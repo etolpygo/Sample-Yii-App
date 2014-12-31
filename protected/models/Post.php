@@ -62,6 +62,12 @@ class Post extends CActiveRecord
 		return parent::beforeDelete();
 	}
 	
+	protected function afterDelete()
+	{
+		parent::afterDelete();
+		Comment::model()->deleteAll('post_id = ' . $this->id);
+	}
+	
 	/**
 	 * @return string the associated database table name
 	 */

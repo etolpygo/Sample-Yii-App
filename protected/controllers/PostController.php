@@ -107,11 +107,16 @@ class PostController extends Controller
 	 */
 	public function actionDelete()
 	{
-		$this->loadModel()->delete();
+		if (Yii::app()->request->isPostRequest) {
+			$this->loadModel()->delete();
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
 			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));
+		}
+		else {
+			throw new CHttpException(400, 'Invalid Request.');
+		}
 	}
 
 	/**
@@ -120,10 +125,11 @@ class PostController extends Controller
 	public function actionIndex()
 	{
 		$criteria = new CDbCriteria(array(
-			'condition'=>'status=' . Post::STATUS_PUBLISHED,
+			//'condition'=>'status=' . Post::STATUS_PUBLISHED,
 			'order'=>'update_time DESC',
 			'with'=>'commentCount'
 		));
+		$criteria->addInCondition('status', array(Post::STATUS_PUBLISHED, Post::STATUS_ARCHIVED));
 		if(isset($_GET['tag'])) {
 			$criteria->addSearchCondition('tags',$_GET['tag']);
 		}
@@ -146,7 +152,7 @@ class PostController extends Controller
 	public function actionAdmin()
 	{
 		$model=new Post('search');
-		$model->unsetAttributes();  // clear any default values
+		// $model->unsetAttributes();  // clear any default values
 		if(isset($_GET['Post']))
 			$model->attributes=$_GET['Post'];
 
