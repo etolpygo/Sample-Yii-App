@@ -11,13 +11,13 @@ $this->pageTitle=$model->title;
 )); ?>
 
 <div id="comments">
-		<h3>
-			<?php echo Utilities::pluralize($model->commentCount, 'comment', 'comments'); ?>
-		</h3>
+	<h3>
+		<?php echo Utilities::pluralize($model->commentCount, 'comment', 'comments'); ?>
+	</h3>
 
-		<?php // $this->renderPartial('_comments',array(
-		// 			'post'=>$model,
-		// 			'comments'=>$model->comments)); ?>
+	<?php $this->renderPartial('_comments',array(
+			'post'=>$model,
+			'comments'=>$model->comments)); ?>
 
 	<h3>Leave a Comment</h3>
 
@@ -26,8 +26,8 @@ $this->pageTitle=$model->title;
 			<?php echo Yii::app()->user->getFlash('commentSubmitted'); ?>
 		</div>
 	<?php else: ?>
-		<?php // $this->renderPartial('/comment/_form',array(
-			// 'model'=>$comment)); ?>
+		<?php $this->renderPartial('/comment/_form',array(
+				'model'=>$comment)); ?>
 	<?php endif; ?>
 
 </div><!-- comments -->
