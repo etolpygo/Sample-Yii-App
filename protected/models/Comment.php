@@ -147,4 +147,8 @@ class Comment extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+	
+	public function getPendingCommentCount() {
+		
+	}
 }
